@@ -112,23 +112,6 @@
          dsid="mobilefooter1" id="j_80" data-theme="a">
     </div>
 </div>
-<script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
-<script src="{{ STATIC_URL }}virtualjoystick.js"></script>
-<script>
-    console.log("touchscreen is", VirtualJoystick.touchScreenAvailable() ? "available" : "not available");
-    var joystick = new VirtualJoystick({
-        container: document.getElementById('container'),
-        mouseSupport: true
-    });
-        data.on("", function(message) {
-          time = message.val();
-        });
-
-    setInterval(function () {
-
-
-    }, 1 / 30 * 1000);
-</script>
 </body>
 
 </html>
