@@ -56,7 +56,7 @@
         var outputEl = document.getElementById('result');
         var data = new Firebase('https://rtr.firebaseIO.com/tuner/{{ video }}');
         var time = 0;
-        data.on("child-added", function(message) {
+        data.on("child_added", function(message) {
           time = message.val();
         });
         data.push({name:"time",text:joystick.deltaX()+";"+joystick.deltaY()});
