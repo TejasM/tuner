@@ -135,8 +135,8 @@
     stage.add(layer);
 
     data.on("child_added", function (message) {
-        if (message.name() == "change") {
-            var string = message.val();
+        if (message.val()["name"] == "change") {
+            var string = message.val()["text"];
             if (string == "up") {
                 rect2.setFill('red');
                 rect3.setFill('red');
