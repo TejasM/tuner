@@ -8,8 +8,9 @@ from django.contrib.auth.decorators import login_required
 from django.core import serializers
 from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect, HttpResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, render_to_response
 from django.contrib.auth import authenticate, login, logout
+from django.template import RequestContext
 from django.utils import timezone
 from django.utils.safestring import mark_safe
 from django.views.decorators.csrf import csrf_exempt
@@ -34,7 +35,7 @@ def start(request):
 
 
 def startPlayback(request):
-    return render(request, 'tuner/startScreen.html', {'video': request.session['video']})
+    return render_to_response( 'tuner/startScreen.html', {'video': request.session['video']}, context_instance=RequestContext(request))
 
 
 def userInput(request):
