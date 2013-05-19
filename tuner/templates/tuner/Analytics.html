@@ -88,13 +88,10 @@
             <div name="GraphPlaceHolder" dsid="GraphPlaceHolder" id="j_37" class=" mobilepanel2">
                 <canvas id="chart" width="800" height="400"></canvas>
             </div>
-            <!-- spacer_42 -->
-            <div id='j_67' dsid="spacer_42" class='mobilespacer mobilespacer2'>
-            </div>
             <!-- SubmitClips -->
-            <div name="panel1" dsid="panel_1" id="perc" class="mobilepanel1">50% Funny</div>
+            <input name="panel1" dsid="panel_1" id="perc" value="50% Funny" class="mobilebutton1" disabled="true"/>
 
-            <div name="panel1" dsid="panel_1" id="type_fun" class="mobilepanel1">Neutral</div>
+            <input name="panel1" dsid="panel_1" id="type_fun" value="Neutral" class="mobilebutton1" disabled="true"/>
         </div>
         <!-- mobilefooter1 -->
         <div data-role="footer" data-position="fixed" class=" mobilefooter3" name="mobilefooter1"
@@ -124,8 +121,8 @@
         var type = ["Inappropriate", "Inappropriate", "Inappropriate", "Inappropriate", "Neutral", "Neutral", "Don't Get It", "Don't Get It", "Don't Get It", "Don't Get It", "Don't Get It", "Witty", "Witty", "Neutral", "Don't Get It", "Don't Get It", "Don't Get It", "Don't Get It", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Witty", "Witty", "Witty", "Neutral", "Witty", "Neutral", "Witty", "Witty", "Witty", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Witty", "Witty", "Witty", "Neutral", "Slapstick", "Slapstick", "Slapstick", "Inappropriate", "Don't Get It", "Don't Get It", "Don't Get It", "Don't Get It", "Don't Get It", "Don't Get It", "Don't Get It", "Don't Get It", "Don't Get It", "Neutral", "Neutral", "Neutral", "Neutral", "Don't Get It", "Don't Get It", "Don't Get It", "Neutral", "Don't Get It", "Don't Get It", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Slapstick", "Slapstick", "Slapstick", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Witty", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Witty", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Witty", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Inappropriate", "Inappropriate", "Inappropriate", "Inappropriate", "Neutral", "Neutral", "Neutral", "Neutral", "Don't Get It", "Don't Get It", "Don't Get It", "Don't Get It", "Don't Get It", "Don't Get It", "Don't Get It", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Don't Get It", "Don't Get It", "Don't Get It", "Don't Get It", "Don't Get It", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral"]
         setInterval(function () {
             try {
-                $('#perc').html(values[i] + '% Funny');
-                $('#type_fun').html(type[i]);
+                $('#perc').val(values[i] + '% Funny');
+                $('#type_fun').val(type[i]);
                 i += 1;
             }
             catch (e) {
