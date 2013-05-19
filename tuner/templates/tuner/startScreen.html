@@ -65,7 +65,7 @@
         <div data-role="footer" data-position="fixed" class=" mobilefooter2" name="mobilefooter1"
              dsid="mobilefooter1" id="j_29" data-theme="a">
         </div>
-        <div id="container"></div>
+        <div id="container" style="position: relative"></div>
     </div>
 </center>
 
@@ -74,122 +74,127 @@
 <script>
     var data = new Firebase('https://rtr.firebaseIO.com/tuner/');
     var t = 0;
+    data.remove();
     {% comment %}    setInterval(function () {
             t += 1;
             data.push({name: "time", text: t * 1000})
         }, 1000);{% endcomment %}
 
-    var stage = new Kinetic.Stage({
-        container: 'container',
-        width: 425,
-        height: 349
+    $(function () {
+
+        var stage = new Kinetic.Stage({
+            container: 'container',
+            width: 425,
+            height: 349
+        });
+
+        var layer = new Kinetic.Layer();
+
+        var rect = new Kinetic.Rect({
+            x: 212.5,
+            y: 174.5,
+            width: 212.5,
+            height: 175,
+            fill: 'white',
+            stroke: 'black',
+            strokeWidth: 0,
+            text: "Don't Get it"
+        });
+
+        var rect1 = new Kinetic.Rect({
+            x: 0,
+            y: 174.5,
+            width: 212.5,
+            height: 175,
+            fill: 'white',
+            stroke: 'black',
+            strokeWidth: 0,
+            text: "Inappropriate"
+        });
+
+        var rect2 = new Kinetic.Rect({
+            x: 212.5,
+            y: 0,
+            width: 212.5,
+            height: 175,
+            fill: 'white',
+            stroke: 'black',
+            strokeWidth: 0,
+            text: "Witty"
+        });
+
+        var rect3 = new Kinetic.Rect({
+            x: 0,
+            y: 0,
+            width: 212.5,
+            height: 175,
+            fill: 'white',
+            stroke: 'black',
+            strokeWidth: 0,
+            text: "Stupid Funny"
+        });
+
+
+        var text = new Kinetic.Text({
+            x: 212.5,
+            y: 261.75,
+            text: "Don't Get it",
+            fontSize: 18,
+            fontFamily: 'Calibri',
+            fill: '#000000',
+            width: 200,
+            padding: 20,
+            align: 'center'
+        });
+        var text1 = new Kinetic.Text({
+            x: 0,
+            y: 261.75,
+            text: "Inappropriate",
+            fontSize: 18,
+            fontFamily: 'Calibri',
+            fill: '#000000',
+            width: 200,
+            padding: 20,
+            align: 'center'
+        });
+        var text2 = new Kinetic.Text({
+            x: 212.5,
+            y: 87.25,
+            text: "Witty Funny",
+            fontSize: 18,
+            fontFamily: 'Calibri',
+            fill: '#000000',
+            width: 200,
+            padding: 20,
+            align: 'center'
+        });
+        var text3 = new Kinetic.Text({
+            x: 0,
+            y: 87.25,
+            text: "Stupid Funny",
+            fontSize: 18,
+            fontFamily: 'Calibri',
+            fill: '#000000',
+            width: 200,
+            padding: 20,
+            align: 'center'
+        });
+
+        // add the shape to the layer
+        layer.add(rect);
+        layer.add(rect1);
+        layer.add(rect2);
+        layer.add(rect3);
+
+        layer.add(text);
+        layer.add(text1);
+        layer.add(text2);
+        layer.add(text3);
+
+        // add the layer to the stage
+        stage.add(layer);
+        $('container').children()[0].children().css('position', 'relative');
     });
-
-    var layer = new Kinetic.Layer();
-
-    var rect = new Kinetic.Rect({
-        x: 212.5,
-        y: 174.5,
-        width: 212.5,
-        height: 175,
-        fill: 'white',
-        stroke: 'black',
-        strokeWidth: 0,
-        text: "Don't Get it"
-    });
-
-    var rect1 = new Kinetic.Rect({
-        x: 0,
-        y: 174.5,
-        width: 212.5,
-        height: 175,
-        fill: 'white',
-        stroke: 'black',
-        strokeWidth: 0,
-        text: "Inappropriate"
-    });
-
-    var rect2 = new Kinetic.Rect({
-        x: 212.5,
-        y: 0,
-        width: 212.5,
-        height: 175,
-        fill: 'white',
-        stroke: 'black',
-        strokeWidth: 0,
-        text: "Witty"
-    });
-
-    var rect3 = new Kinetic.Rect({
-        x: 0,
-        y: 0,
-        width: 212.5,
-        height: 175,
-        fill: 'white',
-        stroke: 'black',
-        strokeWidth: 0,
-        text: "Stupid Funny"
-    });
-
-
-    var text = new Kinetic.Text({
-        x: 212.5,
-        y: 261.75,
-        text: "Don't Get it",
-        fontSize: 18,
-        fontFamily: 'Calibri',
-        fill: '#000000',
-        width: 200,
-        padding: 20,
-        align: 'center'
-    });
-    var text1 = new Kinetic.Text({
-        x: 0,
-        y: 261.75,
-        text: "Inappropriate",
-        fontSize: 18,
-        fontFamily: 'Calibri',
-        fill: '#000000',
-        width: 200,
-        padding: 20,
-        align: 'center'
-    });
-    var text2 = new Kinetic.Text({
-        x: 212.5,
-        y: 87.25,
-        text: "Witty Funny",
-        fontSize: 18,
-        fontFamily: 'Calibri',
-        fill: '#000000',
-        width: 200,
-        padding: 20,
-        align: 'center'
-    });
-    var text3 = new Kinetic.Text({
-        x: 0,
-        y: 87.25,
-        text: "Stupid Funny",
-        fontSize: 18,
-        fontFamily: 'Calibri',
-        fill: '#000000',
-        width: 200,
-        padding: 20,
-        align: 'center'
-    });
-
-    // add the shape to the layer
-    layer.add(rect);
-    layer.add(rect1);
-    layer.add(rect2);
-    layer.add(rect3);
-
-    layer.add(text);
-    layer.add(text1);
-    layer.add(text2);
-    layer.add(text3);
-
-    // add the layer to the stage
-    stage.add(layer);
 
     data.on("child_added", function (message) {
         if (message.val()["name"] == "change") {
@@ -224,7 +229,10 @@
                 layer.draw();
             }, 1000);
         }
+
     });
+
+
 </script>
 </body>
 </html>
