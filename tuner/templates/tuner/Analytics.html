@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            Analytics
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"
+        />
+        <link href="{{ STATIC_URL }}files/resources/lib/theme/jqm/jqm.css" rel="stylesheet" />
+        <link href="{{ STATIC_URL }}files/resources/lib/jquerymobile/1.3.0/jquery.mobile.structure-1.3.0.min.css"
+        rel="stylesheet" />
+        <script type="text/javascript" src="{{ STATIC_URL }}files/resources/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="{{ STATIC_URL }}files/resources/lib/jquery/jquery-1.8.2.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.indexOf("Android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+            });
+        </script>
+        <script type="text/javascript" src="{{ STATIC_URL }}files/resources/lib/jquerymobile/1.3.0/jquery.mobile-1.3.0.js">
+        </script>
+        <script type="text/javascript" src="{{ STATIC_URL }}files/resources/lib/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="{{ STATIC_URL }}files/resources/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="{{ STATIC_URL }}files/resources/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="{{ STATIC_URL }}files/resources/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="{{ STATIC_URL }}files/resources/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="{{ STATIC_URL }}files/resources/lib/base/jsonpath.js">
+        </script>
+        <script type="text/javascript" src="{{ STATIC_URL }}files/resources/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="{{ STATIC_URL }}files/resources/lib/base/appery.js">
+        </script>
+        <link href="{{ STATIC_URL }}files/resources/css/mobilebase.css" rel="stylesheet" type="text/css"
+        />
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                if (navigator.userAgent.match(/iP/i))
+        {
+            $(window).bind('orientationchange', function(event)
+            {
+                $('meta[name="viewport"]').attr('content', 'initial-scale=1.0,maximum-scale=1.0, ' + ((window.orientation == 90 || window.orientation == -90 || window.orientation == 270) ? "height=device-width,width=device-height" : "height=device-height,width=device-width"));
+            }).trigger('orientationchange');
+        }
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="Analytics" id="j_31" class="type-interior"
+        data-theme="a" data-add-back-btn="false" data-back-btn-text="Back">
+            <!-- mobileheader -->
+            <div data-role="header" data-position="fixed" data-theme="a" name="mobileheader"
+            id="j_33" class=' mobileheader3 '>
+                <h1 dsid="mobileheader">
+                    Video Summary
+                </h1>
+            </div>
+            <!-- mobilecontainer -->
+            <div data-role="content" id="j_34" name="mobilecontainer" class=" mobilecontainer3"
+            dsid="mobilecontainer" data-theme="">
+                <link href="{{ STATIC_URL }}Analytics.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="{{ STATIC_URL }}Analytics.js">
+                </script>
+                <!-- FunnyVideo -->
+                <video id="j_36" dsid="FunnyVideo" name="FunnyVideo" class="mobilevideo2" poster=""
+                preload="none" controls="controls">
+                    <source src="" type="" />
+                    <source src="" type="" />
+                    <source src="" type="" />
+                </video>
+                <!-- GraphPlaceHolder -->
+                <div name="GraphPlaceHolder" dsid="GraphPlaceHolder" id="j_37" class=" mobilepanel2">
+                </div>
+                <!-- MostFunnyScenesLabel -->
+                <div name="MostFunnyScenesLabel" id="j_35" dsid="MostFunnyScenesLabel" data-role="appery_label"
+                class=' mobilelabel7 '>
+                    Most Funny Scenes
+                </div>
+                <!-- mobilegrid_12 -->
+                <div class="mobilegrid2_wrapper">
+                    <table id="j_38" class=" mobilegrid2" dsid="mobilegrid_12" name="mobilegrid_12"
+                    cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="mobilegrid2_row_0">
+                            <!-- mobilegridcell_13 -->
+                            <td id="j_39" name="mobilegridcell_13" class="mobilegridcell10" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- MostFunny1 -->
+                                    <video id="j_40" dsid="MostFunny1" name="MostFunny1" class="mobilevideo3" poster=""
+                                    preload="none" controls="controls">
+                                        <source src="" type="" />
+                                        <source src="" type="" />
+                                        <source src="" type="" />
+                                    </video>
+                                    <!-- WhyMetric1 -->
+                                    <div name="WhyMetric1" id="j_41" dsid="WhyMetric1" data-role="appery_label" class=' mobilelabel8 '>
+                                        Clever
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_14 -->
+                            <td id="j_42" name="mobilegridcell_14" class="mobilegridcell11" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- MostFunny2 -->
+                                    <video id="j_43" dsid="MostFunny2" name="MostFunny2" class="mobilevideo4" poster=""
+                                    preload="none" controls="controls">
+                                        <source src="" type="" />
+                                        <source src="" type="" />
+                                        <source src="" type="" />
+                                    </video>
+                                    <!-- WhyMetric2 -->
+                                    <div name="WhyMetric2" id="j_44" dsid="WhyMetric2" data-role="appery_label" class=' mobilelabel9 '>
+                                        Slapstick
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid2_row_1">
+                            <!-- mobilegridcell_15 -->
+                            <td id="j_45" name="mobilegridcell_15" class="mobilegridcell12" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- MostFunny3 -->
+                                    <video id="j_46" dsid="MostFunny3" name="MostFunny3" class="mobilevideo5" poster=""
+                                    preload="none" controls="controls">
+                                        <source src="" type="" />
+                                        <source src="" type="" />
+                                        <source src="" type="" />
+                                    </video>
+                                    <!-- WhyMetric3 -->
+                                    <div name="WhyMetric3" id="j_47" dsid="WhyMetric3" data-role="appery_label" class=' mobilelabel10 '>
+                                        Neutral
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_16 -->
+                            <td id="j_48" name="mobilegridcell_16" class="mobilegridcell13" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- MostFunny4 -->
+                                    <video id="j_49" dsid="MostFunny4" name="MostFunny4" class="mobilevideo6" poster=""
+                                    preload="none" controls="controls">
+                                        <source src="" type="" />
+                                        <source src="" type="" />
+                                        <source src="" type="" />
+                                    </video>
+                                    <!-- WhyMetric4 -->
+                                    <div name="WhyMetric4" id="j_50" dsid="WhyMetric4" data-role="appery_label" class=' mobilelabel11 '>
+                                        Clever
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- spacer_36 -->
+                <div id='j_65' dsid="spacer_36" class='mobilespacer mobilespacer1'>
+                </div>
+                <!-- LeastFunnyScenesLabel -->
+                <div name="LeastFunnyScenesLabel" id="j_51" dsid="LeastFunnyScenesLabel" data-role="appery_label"
+                class=' mobilelabel12 '>
+                    Least Funny Scenes
+                </div>
+                <!-- mobilegrid_22 -->
+                <div class="mobilegrid3_wrapper">
+                    <table id="j_52" class=" mobilegrid3" dsid="mobilegrid_22" name="mobilegrid_22"
+                    cellpadding=0 cellspacing=0>
+                        <col style="width:auto;" />
+                        <col style="width:auto;" />
+                        <tr class="mobilegrid3_row_0">
+                            <!-- mobilegridcell_23 -->
+                            <td id="j_53" name="mobilegridcell_23" class="mobilegridcell14" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- LeastFunny1 -->
+                                    <video id="j_54" dsid="LeastFunny1" name="LeastFunny1" class="mobilevideo7" poster=""
+                                    preload="none" controls="controls">
+                                        <source src="" type="" />
+                                        <source src="" type="" />
+                                        <source src="" type="" />
+                                    </video>
+                                    <!-- WhyNotMetric1 -->
+                                    <div name="WhyNotMetric1" id="j_55" dsid="WhyNotMetric1" data-role="appery_label"
+                                    class=' mobilelabel13 '>
+                                        Don't Get It
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_24 -->
+                            <td id="j_56" name="mobilegridcell_24" class="mobilegridcell15" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- LeastFunny2 -->
+                                    <video id="j_57" dsid="LeastFunny2" name="LeastFunny2" class="mobilevideo8" poster=""
+                                    preload="none" controls="controls">
+                                        <source src="" type="" />
+                                        <source src="" type="" />
+                                        <source src="" type="" />
+                                    </video>
+                                    <!-- WhyNotMetric2 -->
+                                    <div name="WhyNotMetric2" id="j_58" dsid="WhyNotMetric2" data-role="appery_label"
+                                    class=' mobilelabel14 '>
+                                        Inappropriate
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="mobilegrid3_row_1">
+                            <!-- mobilegridcell_25 -->
+                            <td id="j_59" name="mobilegridcell_25" class="mobilegridcell16" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- video_29 -->
+                                    <video id="j_60" dsid="video_29" name="video_29" class="mobilevideo9" poster=""
+                                    preload="none" controls="controls">
+                                        <source src="" type="" />
+                                        <source src="" type="" />
+                                        <source src="" type="" />
+                                    </video>
+                                    <!-- WhyNotMetric3 -->
+                                    <div name="WhyNotMetric3" id="j_61" dsid="WhyNotMetric3" data-role="appery_label"
+                                    class=' mobilelabel15 '>
+                                        Inappropriate
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell_26 -->
+                            <td id="j_62" name="mobilegridcell_26" class="mobilegridcell17" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- video_30 -->
+                                    <video id="j_63" dsid="video_30" name="video_30" class="mobilevideo10" poster=""
+                                    preload="none" controls="controls">
+                                        <source src="" type="" />
+                                        <source src="" type="" />
+                                        <source src="" type="" />
+                                    </video>
+                                    <!-- WhyNotMetric4 -->
+                                    <div name="WhyNotMetric4" id="j_64" dsid="WhyNotMetric4" data-role="appery_label"
+                                    class=' mobilelabel16 '>
+                                        Inappropriate
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- spacer_42 -->
+                <div id='j_67' dsid="spacer_42" class='mobilespacer mobilespacer2'>
+                </div>
+                <!-- SubmitClips -->
+                <a data-role="button" name="SubmitClips" dsid="SubmitClips" class='  mobilebutton1'
+                id='j_66' data-corners="true" data-mini="false" data-theme="a" tabIndex="1">
+                Submit Clips
+                </a>
+            </div>
+            <!-- mobilefooter1 -->
+            <div data-role="footer" data-position="fixed" class=" mobilefooter3" name="mobilefooter1"
+            dsid="mobilefooter1" id="j_68" data-theme="a">
+            </div>
+        </div>
+    </body>
+
+</html>
