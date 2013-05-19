@@ -193,7 +193,8 @@
 
         // add the layer to the stage
         stage.add(layer);
-        $('container').children()[0].children().css('position', 'relative');
+        $("#container canvas:last").css("position", "relative");
+
     });
 
     data.on("child_added", function (message) {

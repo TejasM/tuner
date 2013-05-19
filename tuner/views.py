@@ -25,7 +25,7 @@ def index(request):
 
 
 def start(request):
-    video = request.GET.get('video_input', '')
+    video = request.GET.get('video_input', 'KWrXZzzq1B0')
     if video != '':
         request.session['video'] = video
         return render(request, 'tuner/startScreen.html', {'video': request.session['video']})
@@ -34,7 +34,8 @@ def start(request):
 
 
 def startPlayback(request):
-    return render(request, 'tuner/startScreen.html', {'video': request.session['video']})
+    video = request.session.get('video', 'KWrXZzzq1B0')
+    return render(request, 'tuner/startScreen.html', {'video': video})
 
 
 def userInput(request):

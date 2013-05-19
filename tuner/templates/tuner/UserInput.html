@@ -40,7 +40,7 @@
     </style>
 </head>
 <body>
-<div id="container"></div>
+<div id="container">Click anywhere to start trending!</div>
 <div id="info">
     <span id="result"></span>
 </div>
@@ -52,24 +52,7 @@
         container: document.getElementById('container'),
         mouseSupport: true
     });
-    
-    var canvas	= document.createElement( 'canvas' );
-	canvas.width	= 126;
-	canvas.height	= 126;
-	
-	var ctx		= canvas.getContext('2d');
-	ctx.beginPath(); 
-	ctx.strokeStyle = this._strokeStyle; 
-	ctx.lineWidth	= 6; 
-	ctx.arc( canvas.width/2, canvas.width/2, 40, 0, Math.PI*2, true); 
-	ctx.stroke();	
 
-	ctx.beginPath(); 
-	ctx.strokeStyle	= this._strokeStyle; 
-	ctx.lineWidth	= 2; 
-	ctx.arc( canvas.width/2, canvas.width/2, 60, 0, Math.PI*2, true); 
-	ctx.stroke();
-	
     setInterval(function () {
         var data = new Firebase('https://rtr.firebaseIO.com/tuner/');
         var time = 0;
