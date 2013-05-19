@@ -74,16 +74,16 @@
     <div data-role="content" id="j_25" name="mobilecontainer1" class=" mobilecontainer2"
          dsid="mobilecontainer1" data-theme="">
         <link href="{{ STATIC_URL }}startScreen.css" rel="stylesheet" type="text/css"/>
-        <script type="text/javascript" src="{{ STATIC_URL }}startScreen.js">
-        </script>
+        {% comment %}<script type="text/javascript" src="{{ STATIC_URL }}startScreen.js">
+        </script>{% endcomment %}
         <!-- FunnyVideo -->
         <object width="425" height="349">
             <param id="video" name="movie"
-                   value="http://www.youtube.com/v/{{ video }}?version=3&start=8&end=16&autoplay=1&amp;hl=en_US&amp;rel=0"/>
+                   value="http://www.youtube.com/v/{{ video }}?version=3&autoplay=1&amp;hl=en_US&amp;rel=0"/>
             <param name="allowFullScreen" value="true"/>
             <param name="allowscriptaccess" value="always"/>
             <embed id="video_embedded"
-                   src="http://www.youtube.com/v/{{ video }}?version=3&start=8&end=16&autoplay=1&amp;hl=en_US&amp;rel=0"
+                   src="http://www.youtube.com/v/{{ video }}?version=3&autoplay=1&amp;hl=en_US&amp;rel=0"
                    type="application/x-shockwave-flash" width="425" height="349" allowscriptaccess="always"
                    allowfullscreen="true"></embed>
         </object>
