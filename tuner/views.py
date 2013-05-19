@@ -29,13 +29,13 @@ def start(request):
     video = request.POST.get('video_input', '')
     if video != '':
         request.session['video'] = video
-        return redirect(reverse('tuner:startPlayback'))
+        return HttpResponseRedirect("/tuner/startPlayback")
     else:
         return redirect(reverse('tuner:index'))
 
 
 def startPlayback(request):
-    return render_to_response( 'tuner/startScreen.html', {'video': request.session['video']}, context_instance=RequestContext(request))
+    return render_to_response('tuner/startScreen.html', {'video': request.session['video']}, context_instance=RequestContext(request))
 
 
 def userInput(request):
