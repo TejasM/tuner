@@ -142,21 +142,21 @@
         if (message.val()["name"] == "change") {
             var string = message.val()["text"];
             if (string == "up") {
-                rect2.setFill('red');
-                rect3.setFill('red');
+                rect2.setFill('green');
+                rect3.setFill('green');
             } else if (string == "down") {
                 rect.setFill('red');
                 rect1.setFill('red');
             } else if (string == "left") {
-                rect3.setFill('red');
+                rect3.setFill('green');
                 rect1.setFill('red');
             } else if (string == "right") {
-                rect2.setFill('red');
+                rect2.setFill('green');
                 rect.setFill('red');
             } else if (string.contains("up") && string.contains("left")) {
-                rect3.setFill('red');
+                rect3.setFill('green');
             } else if (string.contains("up") && string.contains("right")) {
-                rect2.setFill('red');
+                rect2.setFill('green');
             } else if (string.contains("down") && string.contains("left")) {
                 rect1.setFill('red');
             } else if (string.contains("down") && string.contains("right")) {
