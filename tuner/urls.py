@@ -12,6 +12,7 @@ urlpatterns = patterns('',
                        url(r'startPlayback/$', views.startPlayback, name='startPlayback'),
                        url(r'input/$', views.userInput, name='userInput'),
                        url(r'analytics/$', views.analytics, name='analytics'),
+                       url(r'fav_scenes/$', views.fav_scenes, name='fav_scenes'),
                        )
 #                        url(r'login/$', views.loginUser, name='login'),
 #                        url(r'profsettings/$', views.prof_settings, name='prof_settings'),

@@ -28,54 +28,56 @@
         }).trigger('orientationchange');
     }
 </script>
-<div data-role="page" style="min-height:480px;" dsid="startScreen" id="j_22" class="type-interior"
-     data-theme="a" data-add-back-btn="false" data-back-btn-text="Back">
-    <!-- mobileheader1 -->
-    <div data-role="header" data-position="fixed" data-theme="a" name="mobileheader1"
-         id="j_24" class=' mobileheader2 '>
-        <h1 dsid="mobileheader1">
-            Playback
-        </h1>
-    </div>
-    <!-- mobilecontainer1 -->
-
-    <div data-role="content" id="j_25" name="mobilecontainer1" class=" mobilecontainer2"
-         dsid="mobilecontainer1" data-theme="">
-        <link href="{{ STATIC_URL }}startScreen.css" rel="stylesheet" type="text/css"/>
-        {% comment %}<script type="text/javascript" src="{{ STATIC_URL }}startScreen.js">
-        </script>{% endcomment %}
-        <!-- FunnyVideo -->
-        <object width="425" height="349">
-            <param id="video" name="movie"
-                   value="http://www.youtube.com/v/{{ video }}?version=3&autoplay=1&amp;hl=en_US&amp;rel=0"/>
-            <param name="allowFullScreen" value="true"/>
-            <param name="allowscriptaccess" value="always"/>
-            <embed id="video_embedded"
-                   src="http://www.youtube.com/v/{{ video }}?version=3&autoplay=1&amp;hl=en_US&amp;rel=0"
-                   type="application/x-shockwave-flash" width="425" height="349" allowscriptaccess="always"
-                   allowfullscreen="true"></embed>
-        </object>
-        <!-- FeedbackDisplay -->
-        <div name="FeedbackDisplay" dsid="FeedbackDisplay" id="j_27">
-
+<center>
+    <div data-role="page" style="min-height:480px;" dsid="startScreen" id="j_22" class="type-interior"
+         data-theme="a" data-add-back-btn="false" data-back-btn-text="Back">
+        <!-- mobileheader1 -->
+        <div data-role="header" data-position="fixed" data-theme="a" name="mobileheader1"
+             id="j_24" class=' mobileheader2 '>
+            <h1 dsid="mobileheader1">
+                Playback
+            </h1>
         </div>
+        <!-- mobilecontainer1 -->
+
+        <div data-role="content" id="j_25" name="mobilecontainer1" class=" mobilecontainer2"
+             dsid="mobilecontainer1" data-theme="">
+            <link href="{{ STATIC_URL }}startScreen.css" rel="stylesheet" type="text/css"/>
+            {% comment %}<script type="text/javascript" src="{{ STATIC_URL }}startScreen.js">
+        </script>{% endcomment %}
+            <!-- FunnyVideo -->
+            <object width="425" height="349">
+                <param id="video" name="movie"
+                       value="http://www.youtube.com/v/{{ video }}?version=3&autoplay=1&amp;hl=en_US&amp;rel=0"/>
+                <param name="allowFullScreen" value="true"/>
+                <param name="allowscriptaccess" value="always"/>
+                <embed id="video_embedded"
+                       src="http://www.youtube.com/v/{{ video }}?version=3&autoplay=1&amp;hl=en_US&amp;rel=0"
+                       type="application/x-shockwave-flash" width="425" height="349" allowscriptaccess="always"
+                       allowfullscreen="true"></embed>
+            </object>
+            <!-- FeedbackDisplay -->
+            <div name="FeedbackDisplay" dsid="FeedbackDisplay" id="j_27">
+
+            </div>
+        </div>
+        <!-- mobilefooter1 -->
+        <div data-role="footer" data-position="fixed" class=" mobilefooter2" name="mobilefooter1"
+             dsid="mobilefooter1" id="j_29" data-theme="a">
+        </div>
+        <div id="container"></div>
     </div>
-    <!-- mobilefooter1 -->
-    <div data-role="footer" data-position="fixed" class=" mobilefooter2" name="mobilefooter1"
-         dsid="mobilefooter1" id="j_29" data-theme="a">
-    </div>
-    <div id="container"></div>
-</div>
+</center>
 
 <script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
 <script type='text/javascript' src="http://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v4.5.1.min.js"></script>
 <script>
     var data = new Firebase('https://rtr.firebaseIO.com/tuner/');
     var t = 0;
-{% comment %}    setInterval(function () {
-        t += 1;
-        data.push({name: "time", text: t * 1000})
-    }, 1000);{% endcomment %}
+    {% comment %}    setInterval(function () {
+            t += 1;
+            data.push({name: "time", text: t * 1000})
+        }, 1000);{% endcomment %}
 
     var stage = new Kinetic.Stage({
         container: 'container',
@@ -130,7 +132,7 @@
     });
 
 
-     var text = new Kinetic.Text({
+    var text = new Kinetic.Text({
         x: 212.5,
         y: 261.75,
         text: "Don't Get it",
@@ -214,7 +216,7 @@
                 rect.setFill('red');
             }
             layer.draw();
-            setTimeout(function(){
+            setTimeout(function () {
                 rect.setFill('white');
                 rect1.setFill('white');
                 rect2.setFill('white');
