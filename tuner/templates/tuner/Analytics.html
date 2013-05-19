@@ -134,9 +134,12 @@
         var i =0;
         var type = ["Inappropriate","Inappropriate","Inappropriate","Inappropriate","Neutral","Neutral","Don't Get It","Don't Get It","Don't Get It","Don't Get It","Don't Get It","Witty","Witty","Neutral","Don't Get It","Don't Get It","Don't Get It","Don't Get It","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Witty","Witty","Witty","Neutral","Witty","Neutral","Witty","Witty","Witty","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Witty","Witty","Witty","Neutral","Slapstick","Slapstick","Slapstick","Inappropriate","Don't Get It","Don't Get It","Don't Get It","Don't Get It","Don't Get It","Don't Get It","Don't Get It","Don't Get It","Don't Get It","Neutral","Neutral","Neutral","Neutral","Don't Get It","Don't Get It","Don't Get It","Neutral","Don't Get It","Don't Get It","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Slapstick","Slapstick","Slapstick","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Witty","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Witty","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Witty","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Inappropriate","Inappropriate","Inappropriate","Inappropriate","Neutral","Neutral","Neutral","Neutral","Don't Get It","Don't Get It","Don't Get It","Don't Get It","Don't Get It","Don't Get It","Don't Get It","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Don't Get It","Don't Get It","Don't Get It","Don't Get It","Don't Get It","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral","Neutral"]
         setInterval(function(){
-            $('#perc').val(values[i]);
-            $('#type_fun').val(type[i]);
-            i+=1;
+            try{
+                $('#perc').text(values[i]);
+                $('#type_fun').text(type[i]);
+                i+=1;
+            }
+            catch(e) {}
         }, 1000)
     });
 </script>
