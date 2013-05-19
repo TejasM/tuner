@@ -120,21 +120,12 @@
         container: document.getElementById('container'),
         mouseSupport: true
     });
-    setInterval(function () {
-        var outputEl = document.getElementById('result');
-        var data = new Firebase('https://rtr.firebaseIO.com/tuner/{{ video }}');
-        var time = 0;
-        data.on("child_added", function(message) {
+        data.on("", function(message) {
           time = message.val();
         });
-        data.push({name:"time",text:joystick.deltaX()+";"+joystick.deltaY()});
-        outputEl.innerHTML = '<b>Result:</b> '
-                + ' dx:' + joystick.deltaX()
-                + ' dy:' + joystick.deltaY()
-                + (joystick.right() ? ' right' : '')
-                + (joystick.up() ? ' up' : '')
-                + (joystick.left() ? ' left' : '')
-                + (joystick.down() ? ' down' : '');
+
+    setInterval(function () {
+
 
     }, 1 / 30 * 1000);
 </script>
