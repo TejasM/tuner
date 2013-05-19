@@ -8,9 +8,8 @@ from django.contrib.auth.decorators import login_required
 from django.core import serializers
 from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect, HttpResponse
-from django.shortcuts import render, redirect, render_to_response
+from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
-from django.template import RequestContext
 from django.utils import timezone
 from django.utils.safestring import mark_safe
 from django.views.decorators.csrf import csrf_exempt
@@ -26,16 +25,16 @@ def index(request):
 
 
 def start(request):
-    video = request.POST.get('video_input', '')
+    video = request.GET.get('video_input', '')
     if video != '':
         request.session['video'] = video
-        return HttpResponseRedirect("/tuner/startPlayback")
+        return render(request, 'tuner/startScreen.html', {'video': request.session['video']})
     else:
         return redirect(reverse('tuner:index'))
 
 
 def startPlayback(request):
-    return render_to_response('tuner/startScreen.html', {'video': request.session['video']}, context_instance=RequestContext(request))
+    return render(request, 'tuner/startScreen.html', {'video': request.session['video']})
 
 
 def userInput(request):

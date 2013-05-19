@@ -61,7 +61,12 @@
            }
         });
         if (parseInt(joystick.deltaX()) != 0 && parseInt(joystick.deltaY()) != 0){
-            data.push({name:"change",text:joystick.deltaX()+";"+joystick.deltaY()+";"+time});
+            var strr = (joystick.right() ? 'right' : '') +
+                    (joystick.left() ? 'left' : '') +
+                    (joystick.up() ? 'up' : '') +
+                    (joystick.down() ? 'down' : '');
+            {% comment %}data.push({name:"change",text:joystick.deltaX()+";"+joystick.deltaY()+";"+time+";"+strr});{% endcomment %}
+            data.push({name:"change",text:strr});
         }
     }, 1000/30);
 </script>
