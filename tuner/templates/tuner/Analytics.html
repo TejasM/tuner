@@ -89,9 +89,9 @@
                 <canvas id="chart" width="800" height="400"></canvas>
             </div>
             <!-- SubmitClips -->
-            <input name="panel1" dsid="panel_1" id="perc" value="50% Funny" class="mobilebutton1" disabled="true"/>
+            <div name="panel1" dsid="panel_1" id="perc" class="mobilebutton1" style="font-size: 30px"><strong>50% Funny</strong></div>
 
-            <input name="panel1" dsid="panel_1" id="type_fun" value="Neutral" class="mobilebutton1" disabled="true"/>
+            <div name="panel1" dsid="panel_1" id="type_fun" class="mobilebutton1" style="font-size: 30px"><strong>Neutral</strong></div>
         </div>
         <!-- mobilefooter1 -->
         <div data-role="footer" data-position="fixed" class=" mobilefooter3" name="mobilefooter1"
@@ -107,22 +107,22 @@
             labels: ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
             datasets: [
                 {
-                    fillColor: "rgba(255,51,51,0.5)",
-                    strokeColor: "rgba(151,187,205,1)",
-                    pointColor: "rgba(151,187,205,1)",
-                    pointStrokeColor: "#fff",
+                    fillColor: "#303030",
+                    strokeColor: "rgba(255,51,51,0.5)",
+                    pointColor: "rgba(255,51,51,0.5)",
+                    pointStrokeColor: "#ff3333",
                     data: [-20, -30, -50, -10, 0, 0, -10, -30, -50, -20, -5, 5, 10, 0, -5, -10, -15, -5, 0, 0, 5, 5, 5, 0, 0, 0, 0, 0, 20, 100, 100, 0, 40, 0, 20, 40, 85, 0, 0, 0, 0, 0, 0, 10, 20, 30, 70, 80, 90, 0, 85, 90, 100, -10, -40, -50, -20, -80, -100, -100, -100, -100, -90, -60, -50, -40, -50, -80, -80, -85, -75, -50, -40, -30, 0, 0, 0, 0, 0, 0, 50, 100, 100, 0, 0, -60, -70, -70, 0, 0, 0, 0, 0, 0, 0, 10, 20, 30, 40, 40, 80, 0, 0, 0, 0, 0, 10, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 0, 0, 0, 0, 0, 0, 0, 0, 50, -70, -60, -60, -60, -60, -60, -60, -60, -70, -70, 0, 0, 0, 0, -50, -60, -50, -40, -30, -40, -50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -30, -40, -40, -50, 0, 0, 0, 0, 0, -30, -30, -40, 0, 0, 0, -20, -10, -10, -10, -10, 0, 0, 0, 0, 0, 0, 0]
                 }
             ]
         }
-        var myNewChart = new Chart(ctx).Line(data, {});
+        var myNewChart = new Chart(ctx).Line(data, {pointDotRadius : 0,pointDotStrokeWidth : 0, datasetStrokeWidth : 10});
         var values = [-20, -30, -50, -10, 0, 0, -10, -30, -50, -20, -5, 5, 10, 0, -5, -10, -15, -5, 0, 0, 5, 5, 5, 0, 0, 0, 0, 0, 20, 100, 100, 0, 40, 0, 20, 40, 85, 0, 0, 0, 0, 0, 0, 10, 20, 30, 70, 80, 90, 0, 85, 90, 100, -10, -40, -50, -20, -80, -100, -100, -100, -100, -90, -60, -50, -40, -50, -80, -80, -85, -75, -50, -40, -30, 0, 0, 0, 0, 0, 0, 50, 100, 100, 0, 0, -60, -70, -70, 0, 0, 0, 0, 0, 0, 0, 10, 20, 30, 40, 40, 80, 0, 0, 0, 0, 0, 10, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 0, 0, 0, 0, 0, 0, 0, 0, 50, -70, -60, -60, -60, -60, -60, -60, -60, -70, -70, 0, 0, 0, 0, -50, -60, -50, -40, -30, -40, -50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -30, -40, -40, -50, 0, 0, 0, 0, 0, -30, -30, -40, 0, 0, 0, -20, -10, -10, -10, -10, 0, 0, 0, 0, 0, 0, 0]
         var i = 0;
         var type = ["Inappropriate", "Inappropriate", "Inappropriate", "Inappropriate", "Neutral", "Neutral", "Don't Get It", "Don't Get It", "Don't Get It", "Don't Get It", "Don't Get It", "Witty", "Witty", "Neutral", "Don't Get It", "Don't Get It", "Don't Get It", "Don't Get It", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Witty", "Witty", "Witty", "Neutral", "Witty", "Neutral", "Witty", "Witty", "Witty", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Witty", "Witty", "Witty", "Neutral", "Slapstick", "Slapstick", "Slapstick", "Inappropriate", "Don't Get It", "Don't Get It", "Don't Get It", "Don't Get It", "Don't Get It", "Don't Get It", "Don't Get It", "Don't Get It", "Don't Get It", "Neutral", "Neutral", "Neutral", "Neutral", "Don't Get It", "Don't Get It", "Don't Get It", "Neutral", "Don't Get It", "Don't Get It", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Slapstick", "Slapstick", "Slapstick", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Witty", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Witty", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Witty", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Inappropriate", "Inappropriate", "Inappropriate", "Inappropriate", "Neutral", "Neutral", "Neutral", "Neutral", "Don't Get It", "Don't Get It", "Don't Get It", "Don't Get It", "Don't Get It", "Don't Get It", "Don't Get It", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Don't Get It", "Don't Get It", "Don't Get It", "Don't Get It", "Don't Get It", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral", "Neutral"]
         setInterval(function () {
             try {
-                $('#perc').val(values[i] + '% Funny');
-                $('#type_fun').val(type[i]);
+                $('#perc').html('<strong>' + values[i] + '% Funny'+'</strong>');
+                $('#type_fun').html('<strong>' +type[i]+'</strong>');
                 i += 1;
             }
             catch (e) {
