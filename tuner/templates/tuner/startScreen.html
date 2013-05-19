@@ -72,10 +72,10 @@
 <script>
     var data = new Firebase('https://rtr.firebaseIO.com/tuner/');
     var t = 0;
-    setInterval(function () {
+{% comment %}    setInterval(function () {
         t += 1;
         data.push({name: "time", text: t * 1000})
-    }, 1000);
+    }, 1000);{% endcomment %}
 
     var stage = new Kinetic.Stage({
         container: 'container',
