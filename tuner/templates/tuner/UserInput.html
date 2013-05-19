@@ -56,8 +56,9 @@
         var data = new Firebase('https://rtr.firebaseIO.com/tuner/');
         var time = 0;
         data.on("child_added", function(message) {
-
-          time = message.val();
+           if(message.name() == "time"){
+                time = message.val();
+           }
         });
         data.push({name:"change",text:joystick.deltaX()+";"+joystick.deltaY()+";"+time});
     }, 1 / 30 * 1000);
