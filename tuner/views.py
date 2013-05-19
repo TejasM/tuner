@@ -34,7 +34,16 @@ def start(request):
 
 
 def startPlayback(request):
-    return render(request, 'tuner/startScreen.html', {'video': request.session['video'] })
+    return render(request, 'tuner/startScreen.html', {'video': request.session['video']})
+
+
+def userInput(request):
+    return render(request, 'tuner/UserInput.html')
+
+
+def analytics(request):
+    return render(request, 'tuner/Analytics.html')
+
 
 #
 #
@@ -522,3 +531,5 @@ def startPlayback(request):
 #     session = Session.objects.get(pk=int(request.session['session']))
 #     send_event("stop-trending-" + str(session.id), json.dumps({}))
 #     return HttpResponse(json.dumps({}), mimetype="application/json")
+
+

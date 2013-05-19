@@ -10,6 +10,8 @@ urlpatterns = patterns('',
                        url(r'^$', views.index, name='index'),
                        url(r'start/$', views.start, name='start'),
                        url(r'startPlayback/$', views.startPlayback, name='startPlayback'),
+                       url(r'input/$', views.userInput, name='userInput'),
+                       url(r'analytics/$', views.analytics, name='analytics'),
                        )
 #                        url(r'login/$', views.loginUser, name='login'),
 #                        url(r'profsettings/$', views.prof_settings, name='prof_settings'),

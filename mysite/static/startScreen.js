@@ -49,12 +49,6 @@ function insertComment(){
     }
 }
 
-function init(){
-    var video = get_cookie('video');
-    document.getElementById("video").src = "http://www.youtube.com/v/" + video + "?version=3&autoplay=1&amp;hl=en_US&amp;rel=0";
-    document.getElementById("video_embedded").src = "http://www.youtube.com/v/" + video + "?version=3&autoplay=1&amp;hl=en_US&amp;rel=0";
-}
-
 //createSpinner("files/resources/lib/jquerymobile/images/ajax-loader.gif");
 Appery.AppPages = [{
     "name": "UserInput",

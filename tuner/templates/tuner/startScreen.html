@@ -47,13 +47,20 @@
             />
 </head>
 
-<body onload="init()">
+<body>
 <script language="JavaScript" type="text/javascript">
     if (navigator.userAgent.match(/iP/i)) {
         $(window).bind('orientationchange',function (event) {
             $('meta[name="viewport"]').attr('content', 'initial-scale=1.0,maximum-scale=1.0, ' + ((window.orientation == 90 || window.orientation == -90 || window.orientation == 270) ? "height=device-width,width=device-height" : "height=device-height,width=device-width"));
         }).trigger('orientationchange');
     }
+
+    var data = new Firebase('https://rtr.firebaseIO.com/tuner/{{ video }}');
+    var t = 1;
+    setInterval(function(){
+        data.push({name:"timeupdate-{{ video }}",text:t});
+        t+=1;
+    }, 1000);
 </script>
 <div data-role="page" style="min-height:480px;" dsid="startScreen" id="j_22" class="type-interior"
      data-theme="a" data-add-back-btn="false" data-back-btn-text="Back">

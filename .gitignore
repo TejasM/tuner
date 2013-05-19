@@ -40,7 +40,6 @@ nosetests.xml
 *.iws
 .idea/
 database
-rtr
 
 
 node_modules

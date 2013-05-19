@@ -7,6 +7,7 @@ import tuner
 
 admin.autodiscover()
 
+
 urlpatterns = patterns('',
                        # Examples:
                        url(r'^tuner/', include('tuner.urls', namespace="tuner")),
