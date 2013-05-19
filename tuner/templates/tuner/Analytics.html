@@ -1,34 +1,32 @@
 <!DOCTYPE html>
 <html>
-    
-    <head>
-        <title>
-            Analytics
-        </title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="viewport" content="initial-scale=1" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"
-        />
-{% comment %}        <link href="{{ STATIC_URL }}files/resources/lib/theme/jqm/jqm.css" rel="stylesheet" />{% endcomment %}
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css"/>
-{% comment %}        <script type="text/javascript" src="{{ STATIC_URL }}files/resources/lib/store/json2.js">
+
+<head>
+    <title>
+        Analytics
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="initial-scale=1"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"
+            />
+    {% comment %}        <link href="{{ STATIC_URL }}files/resources/lib/theme/jqm/jqm.css" rel="stylesheet" />{% endcomment %}
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css"/>
+    {% comment %}        <script type="text/javascript" src="{{ STATIC_URL }}files/resources/lib/store/json2.js">
         </script>
         <script type="text/javascript" src="{{ STATIC_URL }}files/resources/lib/jquery/jquery-1.8.2.js">
         </script>{% endcomment %}
-        <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-        <script type="text/javascript">
-                    $(document).bind("mobileinit", function()
-            {
-                if (navigator.userAgent.indexOf("Android") != -1)
-                {
-                    $.mobile.defaultPageTransition = 'none';
-                    $.mobile.defaultDialogTransition = 'none';
-                }
-            });
-        </script>
-        <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
-{% comment %}        <script type="text/javascript" src="{{ STATIC_URL }}files/resources/lib/mobilebase.js">
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript">
+        $(document).bind("mobileinit", function () {
+            if (navigator.userAgent.indexOf("Android") != -1) {
+                $.mobile.defaultPageTransition = 'none';
+                $.mobile.defaultDialogTransition = 'none';
+            }
+        });
+    </script>
+    <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+    {% comment %}        <script type="text/javascript" src="{{ STATIC_URL }}files/resources/lib/mobilebase.js">
         </script>
         <script type="text/javascript" src="{{ STATIC_URL }}files/resources/lib/event/customEventHandler.js">
         </script>
@@ -46,285 +44,285 @@
         </script>
         <link href="{{ STATIC_URL }}files/resources/css/mobilebase.css" rel="stylesheet" type="text/css"
         />{% endcomment %}
-    </head>
-    
-    <body>
-        <script language="JavaScript" type="text/javascript">
-                if (navigator.userAgent.match(/iP/i))
-        {
-            $(window).bind('orientationchange', function(event)
-            {
-                $('meta[name="viewport"]').attr('content', 'initial-scale=1.0,maximum-scale=1.0, ' + ((window.orientation == 90 || window.orientation == -90 || window.orientation == 270) ? "height=device-width,width=device-height" : "height=device-height,width=device-width"));
-            }).trigger('orientationchange');
-        }
-        </script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-		<script src="http://code.highcharts.com/highcharts.js"></script>
-        <div data-role="page" style="min-height:480px;" dsid="Analytics" id="j_31" class="type-interior"
-        data-theme="a" data-add-back-btn="false" data-back-btn-text="Back">
-            <!-- mobileheader -->
-            <div data-role="header" data-position="fixed" data-theme="a" name="mobileheader"
-            id="j_33" class=' mobileheader3 '>
-                <h1 dsid="mobileheader">
-                    Video Summary
-                </h1>
-            </div>
-            <!-- mobilecontainer -->
-            <div data-role="content" id="j_34" name="mobilecontainer" class=" mobilecontainer3"
-            dsid="mobilecontainer" data-theme="">
-                <link href="{{ STATIC_URL }}Analytics.css" rel="stylesheet" type="text/css" />
-                {% comment %}<script type="text/javascript" src="{{ STATIC_URL }}Analytics.js">
-                </script>{% endcomment %}
-                <!-- FunnyVideo -->
-                <object class="mobilevideo2">
-                    <param id="video" name="movie"
-                           value="http://www.youtube.com/v/KWrXZzzq1B0?version=3"/>
-                    <param name="allowFullScreen" value="true"/>
-                    <param name="allowscriptaccess" value="always"/>
-                    <embed id="video_embedded"
-                           src="http://www.youtube.com/v/KWrXZzzq1B0?version=3"
-                           type="application/x-shockwave-flash" class="mobilevideo2" allowscriptaccess="always"
-                           allowfullscreen="true"></embed>
-                </object>
+</head>
 
-                <!-- GraphPlaceHolder -->
-                <div name="GraphPlaceHolder" dsid="GraphPlaceHolder" id="j_37" class=" mobilepanel2">
-				<canvas id="chart" width="800" height="400"></canvas>
+<body>
+<script language="JavaScript" type="text/javascript">
+    if (navigator.userAgent.match(/iP/i)) {
+        $(window).bind('orientationchange',function (event) {
+            $('meta[name="viewport"]').attr('content', 'initial-scale=1.0,maximum-scale=1.0, ' + ((window.orientation == 90 || window.orientation == -90 || window.orientation == 270) ? "height=device-width,width=device-height" : "height=device-height,width=device-width"));
+        }).trigger('orientationchange');
+    }
+</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<center>
+<div data-role="page" style="min-height:480px;" dsid="Analytics" id="j_31" class="type-interior"
+     data-theme="a" data-add-back-btn="false" data-back-btn-text="Back">
+<!-- mobileheader -->
+<div data-role="header" data-position="fixed" data-theme="a" name="mobileheader"
+     id="j_33" class=' mobileheader3 '>
+    <h1 dsid="mobileheader">
+        Video Summary
+    </h1>
+</div>
+<!-- mobilecontainer -->
+<div data-role="content" id="j_34" name="mobilecontainer" class=" mobilecontainer3"
+     dsid="mobilecontainer" data-theme="">
+<link href="{{ STATIC_URL }}Analytics.css" rel="stylesheet" type="text/css"/>
+{% comment %}<script type="text/javascript" src="{{ STATIC_URL }}Analytics.js">
+                </script>{% endcomment %}
+<!-- FunnyVideo -->
+<object class="mobilevideo2">
+    <param id="video" name="movie"
+           value="http://www.youtube.com/v/KWrXZzzq1B0?version=3"/>
+    <param name="allowFullScreen" value="true"/>
+    <param name="allowscriptaccess" value="always"/>
+    <embed id="video_embedded"
+           src="http://www.youtube.com/v/KWrXZzzq1B0?version=3"
+           type="application/x-shockwave-flash" class="mobilevideo2" allowscriptaccess="always"
+           allowfullscreen="true"></embed>
+</object>
+
+<!-- GraphPlaceHolder -->
+<div name="GraphPlaceHolder" dsid="GraphPlaceHolder" id="j_37" class=" mobilepanel2">
+    <canvas id="chart" width="800" height="400"></canvas>
+</div>
+<!-- MostFunnyScenesLabel -->
+<div name="MostFunnyScenesLabel" id="j_35" dsid="MostFunnyScenesLabel" data-role="appery_label"
+     class=' mobilelabel7 '>
+    Most Funny Scenes
+</div>
+<!-- mobilegrid_12 -->
+<div class="mobilegrid2_wrapper">
+    <table id="j_38" class=" mobilegrid2" dsid="mobilegrid_12" name="mobilegrid_12"
+           cellpadding=0 cellspacing=0>
+        <col style="width:auto;"/>
+        <col style="width:auto;"/>
+        <tr class="mobilegrid2_row_0">
+            <!-- mobilegridcell_13 -->
+            <td id="j_39" name="mobilegridcell_13" class="mobilegridcell10" colspan=1 rowspan=1>
+                <div class="cell-wrapper">
+                    <!-- MostFunny1 -->
+                    <object class="mobilevideo3">
+                        <param id="video" name="movie"
+                               value="http://www.youtube.com/v/KWrXZzzq1B0?version=3&start=29&end=32&autoplay=0&amp;hl=en_US&amp;rel=0"/>
+                        <param name="allowFullScreen" value="true"/>
+                        <param name="allowscriptaccess" value="always"/>
+                        <embed id="video_embedded"
+                               src="http://www.youtube.com/v/KWrXZzzq1B0?version=3&start=11&end=13&autoplay=0&amp;hl=en_US&amp;rel=0"
+                               type="application/x-shockwave-flash" class="mobilevideo3" allowscriptaccess="always"
+                               allowfullscreen="true"></embed>
+                    </object>
+                    <!-- WhyMetric1 -->
+                    <div name="WhyMetric1" id="j_41" dsid="WhyMetric1" data-role="appery_label" class=' mobilelabel8 '>
+                        Clever
+                    </div>
                 </div>
-                <!-- MostFunnyScenesLabel -->
-                <div name="MostFunnyScenesLabel" id="j_35" dsid="MostFunnyScenesLabel" data-role="appery_label"
-                class=' mobilelabel7 '>
-                    Most Funny Scenes
+            </td>
+            <!-- mobilegridcell_14 -->
+            <td id="j_42" name="mobilegridcell_14" class="mobilegridcell11" colspan=1 rowspan=1>
+                <div class="cell-wrapper">
+                    <!-- MostFunny2 -->
+                    <object class="mobilevideo4">
+                        <param id="video" name="movie"
+                               value="http://www.youtube.com/v/KWrXZzzq1B0?version=3&start=120&end=123&autoplay=0&amp;hl=en_US&amp;rel=0"/>
+                        <param name="allowFullScreen" value="true"/>
+                        <param name="allowscriptaccess" value="always"/>
+                        <embed id="video_embedded"
+                               src="http://www.youtube.com/v/KWrXZzzq1B0?version=3&start=120&end=123&autoplay=0&amp;hl=en_US&amp;rel=0"
+                               type="application/x-shockwave-flash" class="mobilevideo4" allowscriptaccess="always"
+                               allowfullscreen="true"></embed>
+                    </object>
+                    <!-- WhyMetric2 -->
+                    <div name="WhyMetric2" id="j_44" dsid="WhyMetric2" data-role="appery_label" class=' mobilelabel9 '>
+                        Slapstick
+                    </div>
                 </div>
-                <!-- mobilegrid_12 -->
-                <div class="mobilegrid2_wrapper">
-                    <table id="j_38" class=" mobilegrid2" dsid="mobilegrid_12" name="mobilegrid_12"
-                    cellpadding=0 cellspacing=0>
-                        <col style="width:auto;" />
-                        <col style="width:auto;" />
-                        <tr class="mobilegrid2_row_0">
-                            <!-- mobilegridcell_13 -->
-                            <td id="j_39" name="mobilegridcell_13" class="mobilegridcell10" colspan=1 rowspan=1>
-                                <div class="cell-wrapper">
-                                    <!-- MostFunny1 -->
-                                    <object class="mobilevideo3">
-                                        <param id="video" name="movie"
-                                               value="http://www.youtube.com/v/KWrXZzzq1B0?version=3&start=29&end=32&autoplay=0&amp;hl=en_US&amp;rel=0"/>
-                                        <param name="allowFullScreen" value="true"/>
-                                        <param name="allowscriptaccess" value="always"/>
-                                        <embed id="video_embedded"
-                                               src="http://www.youtube.com/v/KWrXZzzq1B0?version=3&start=11&end=13&autoplay=0&amp;hl=en_US&amp;rel=0"
-                                               type="application/x-shockwave-flash" class="mobilevideo3" allowscriptaccess="always"
-                                               allowfullscreen="true"></embed>
-                                    </object>
-                                    <!-- WhyMetric1 -->
-                                    <div name="WhyMetric1" id="j_41" dsid="WhyMetric1" data-role="appery_label" class=' mobilelabel8 '>
-                                        Clever
-                                    </div>
-                                </div>
-                            </td>
-                            <!-- mobilegridcell_14 -->
-                            <td id="j_42" name="mobilegridcell_14" class="mobilegridcell11" colspan=1 rowspan=1>
-                                <div class="cell-wrapper">
-                                    <!-- MostFunny2 -->
-                                    <object class="mobilevideo4">
-                                        <param id="video" name="movie"
-                                               value="http://www.youtube.com/v/KWrXZzzq1B0?version=3&start=120&end=123&autoplay=0&amp;hl=en_US&amp;rel=0"/>
-                                        <param name="allowFullScreen" value="true"/>
-                                        <param name="allowscriptaccess" value="always"/>
-                                        <embed id="video_embedded"
-                                               src="http://www.youtube.com/v/KWrXZzzq1B0?version=3&start=120&end=123&autoplay=0&amp;hl=en_US&amp;rel=0"
-                                               type="application/x-shockwave-flash" class="mobilevideo4" allowscriptaccess="always"
-                                               allowfullscreen="true"></embed>
-                                    </object>
-                                    <!-- WhyMetric2 -->
-                                    <div name="WhyMetric2" id="j_44" dsid="WhyMetric2" data-role="appery_label" class=' mobilelabel9 '>
-                                        Slapstick
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="mobilegrid2_row_1">
-                            <!-- mobilegridcell_15 -->
-                            <td id="j_45" name="mobilegridcell_15" class="mobilegridcell12" colspan=1 rowspan=1>
-                                <div class="cell-wrapper">
-                                    <!-- MostFunny3 -->
-                                    <object class="mobilevideo5">
-                                        <param id="video" name="movie"
-                                               value="http://www.youtube.com/v/KWrXZzzq1B0?version=3&start=11&end=13&autoplay=0&amp;hl=en_US&amp;rel=0"/>
-                                        <param name="allowFullScreen" value="true"/>
-                                        <param name="allowscriptaccess" value="always"/>
-                                        <embed id="video_embedded"
-                                               src="http://www.youtube.com/v/KWrXZzzq1B0?version=3&start=11&end=13&autoplay=0&amp;hl=en_US&amp;rel=0"
-                                               type="application/x-shockwave-flash" class="mobilevideo5" allowscriptaccess="always"
-                                               allowfullscreen="true"></embed>
-                                    </object>
-                                    <!-- WhyMetric3 -->
-                                    <div name="WhyMetric3" id="j_47" dsid="WhyMetric3" data-role="appery_label" class=' mobilelabel10 '>
-                                        Neutral
-                                    </div>
-                                </div>
-                            </td>
-                            <!-- mobilegridcell_16 -->
-                            <td id="j_48" name="mobilegridcell_16" class="mobilegridcell13" colspan=1 rowspan=1>
-                                <div class="cell-wrapper">
-                                    <!-- MostFunny4 -->
-                                   <object class="mobilevideo6">
-                                        <param id="video" name="movie"
-                                               value="http://www.youtube.com/v/KWrXZzzq1B0?version=3&start=11&end=13&autoplay=0&amp;hl=en_US&amp;rel=0"/>
-                                        <param name="allowFullScreen" value="true"/>
-                                        <param name="allowscriptaccess" value="always"/>
-                                        <embed id="video_embedded"
-                                               src="http://www.youtube.com/v/KWrXZzzq1B0?version=3&start=11&end=13&autoplay=0&amp;hl=en_US&amp;rel=0"
-                                               type="application/x-shockwave-flash" class="mobilevideo6" allowscriptaccess="always"
-                                               allowfullscreen="true"></embed>
-                                    </object>
-                                    <!-- WhyMetric4 -->
-                                    <div name="WhyMetric4" id="j_50" dsid="WhyMetric4" data-role="appery_label" class=' mobilelabel11 '>
-                                        Clever
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
+            </td>
+        </tr>
+        <tr class="mobilegrid2_row_1">
+            <!-- mobilegridcell_15 -->
+            <td id="j_45" name="mobilegridcell_15" class="mobilegridcell12" colspan=1 rowspan=1>
+                <div class="cell-wrapper">
+                    <!-- MostFunny3 -->
+                    <object class="mobilevideo5">
+                        <param id="video" name="movie"
+                               value="http://www.youtube.com/v/KWrXZzzq1B0?version=3&start=11&end=13&autoplay=0&amp;hl=en_US&amp;rel=0"/>
+                        <param name="allowFullScreen" value="true"/>
+                        <param name="allowscriptaccess" value="always"/>
+                        <embed id="video_embedded"
+                               src="http://www.youtube.com/v/KWrXZzzq1B0?version=3&start=11&end=13&autoplay=0&amp;hl=en_US&amp;rel=0"
+                               type="application/x-shockwave-flash" class="mobilevideo5" allowscriptaccess="always"
+                               allowfullscreen="true"></embed>
+                    </object>
+                    <!-- WhyMetric3 -->
+                    <div name="WhyMetric3" id="j_47" dsid="WhyMetric3" data-role="appery_label" class=' mobilelabel10 '>
+                        Neutral
+                    </div>
                 </div>
-                <!-- spacer_36 -->
-                <div id='j_65' dsid="spacer_36" class='mobilespacer mobilespacer1'>
+            </td>
+            <!-- mobilegridcell_16 -->
+            <td id="j_48" name="mobilegridcell_16" class="mobilegridcell13" colspan=1 rowspan=1>
+                <div class="cell-wrapper">
+                    <!-- MostFunny4 -->
+                    <object class="mobilevideo6">
+                        <param id="video" name="movie"
+                               value="http://www.youtube.com/v/KWrXZzzq1B0?version=3&start=11&end=13&autoplay=0&amp;hl=en_US&amp;rel=0"/>
+                        <param name="allowFullScreen" value="true"/>
+                        <param name="allowscriptaccess" value="always"/>
+                        <embed id="video_embedded"
+                               src="http://www.youtube.com/v/KWrXZzzq1B0?version=3&start=11&end=13&autoplay=0&amp;hl=en_US&amp;rel=0"
+                               type="application/x-shockwave-flash" class="mobilevideo6" allowscriptaccess="always"
+                               allowfullscreen="true"></embed>
+                    </object>
+                    <!-- WhyMetric4 -->
+                    <div name="WhyMetric4" id="j_50" dsid="WhyMetric4" data-role="appery_label" class=' mobilelabel11 '>
+                        Clever
+                    </div>
                 </div>
-                <!-- LeastFunnyScenesLabel -->
-                <div name="LeastFunnyScenesLabel" id="j_51" dsid="LeastFunnyScenesLabel" data-role="appery_label"
-                class=' mobilelabel12 '>
-                    Least Funny Scenes
+            </td>
+        </tr>
+    </table>
+</div>
+<!-- spacer_36 -->
+<div id='j_65' dsid="spacer_36" class='mobilespacer mobilespacer1'>
+</div>
+<!-- LeastFunnyScenesLabel -->
+<div name="LeastFunnyScenesLabel" id="j_51" dsid="LeastFunnyScenesLabel" data-role="appery_label"
+     class=' mobilelabel12 '>
+    Least Funny Scenes
+</div>
+<!-- mobilegrid_22 -->
+<div class="mobilegrid3_wrapper">
+    <table id="j_52" class=" mobilegrid3" dsid="mobilegrid_22" name="mobilegrid_22"
+           cellpadding=0 cellspacing=0>
+        <col style="width:auto;"/>
+        <col style="width:auto;"/>
+        <tr class="mobilegrid3_row_0">
+            <!-- mobilegridcell_23 -->
+            <td id="j_53" name="mobilegridcell_23" class="mobilegridcell14" colspan=1 rowspan=1>
+                <div class="cell-wrapper">
+                    <!-- LeastFunny1 -->
+                    <object class="mobilevideo7">
+                        <param id="video" name="movie"
+                               value="http://www.youtube.com/v/KWrXZzzq1B0?version=3&start=11&end=13&autoplay=0&amp;hl=en_US&amp;rel=0"/>
+                        <param name="allowFullScreen" value="true"/>
+                        <param name="allowscriptaccess" value="always"/>
+                        <embed id="video_embedded"
+                               src="http://www.youtube.com/v/KWrXZzzq1B0?version=3&start=11&end=13&autoplay=0&amp;hl=en_US&amp;rel=0"
+                               type="application/x-shockwave-flash" class="mobilevideo7" allowscriptaccess="always"
+                               allowfullscreen="true"></embed>
+                    </object>
+                    <!-- WhyNotMetric1 -->
+                    <div name="WhyNotMetric1" id="j_55" dsid="WhyNotMetric1" data-role="appery_label"
+                         class=' mobilelabel13 '>
+                        Don't Get It
+                    </div>
                 </div>
-                <!-- mobilegrid_22 -->
-                <div class="mobilegrid3_wrapper">
-                    <table id="j_52" class=" mobilegrid3" dsid="mobilegrid_22" name="mobilegrid_22"
-                    cellpadding=0 cellspacing=0>
-                        <col style="width:auto;" />
-                        <col style="width:auto;" />
-                        <tr class="mobilegrid3_row_0">
-                            <!-- mobilegridcell_23 -->
-                            <td id="j_53" name="mobilegridcell_23" class="mobilegridcell14" colspan=1 rowspan=1>
-                                <div class="cell-wrapper">
-                                    <!-- LeastFunny1 -->
-                                    <object class="mobilevideo7">
-                                        <param id="video" name="movie"
-                                               value="http://www.youtube.com/v/KWrXZzzq1B0?version=3&start=11&end=13&autoplay=0&amp;hl=en_US&amp;rel=0"/>
-                                        <param name="allowFullScreen" value="true"/>
-                                        <param name="allowscriptaccess" value="always"/>
-                                        <embed id="video_embedded"
-                                               src="http://www.youtube.com/v/KWrXZzzq1B0?version=3&start=11&end=13&autoplay=0&amp;hl=en_US&amp;rel=0"
-                                               type="application/x-shockwave-flash" class="mobilevideo7" allowscriptaccess="always"
-                                               allowfullscreen="true"></embed>
-                                    </object>
-                                    <!-- WhyNotMetric1 -->
-                                    <div name="WhyNotMetric1" id="j_55" dsid="WhyNotMetric1" data-role="appery_label"
-                                    class=' mobilelabel13 '>
-                                        Don't Get It
-                                    </div>
-                                </div>
-                            </td>
-                            <!-- mobilegridcell_24 -->
-                            <td id="j_56" name="mobilegridcell_24" class="mobilegridcell15" colspan=1 rowspan=1>
-                                <div class="cell-wrapper">
-                                    <!-- LeastFunny2 -->
-                                    <object class="mobilevideo8">
-                                        <param id="video" name="movie"
-                                               value="http://www.youtube.com/v/KWrXZzzq1B0?version=3&start=11&end=13&autoplay=0&amp;hl=en_US&amp;rel=0"/>
-                                        <param name="allowFullScreen" value="true"/>
-                                        <param name="allowscriptaccess" value="always"/>
-                                        <embed id="video_embedded"
-                                               src="http://www.youtube.com/v/KWrXZzzq1B0?version=3&start=11&end=13&autoplay=0&amp;hl=en_US&amp;rel=0"
-                                               type="application/x-shockwave-flash" class="mobilevideo8" allowscriptaccess="always"
-                                               allowfullscreen="true"></embed>
-                                    </object>
-                                    <!-- WhyNotMetric2 -->
-                                    <div name="WhyNotMetric2" id="j_58" dsid="WhyNotMetric2" data-role="appery_label"
-                                    class=' mobilelabel14 '>
-                                        Inappropriate
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="mobilegrid3_row_1">
-                            <!-- mobilegridcell_25 -->
-                            <td id="j_59" name="mobilegridcell_25" class="mobilegridcell16" colspan=1 rowspan=1>
-                                <div class="cell-wrapper">
-                                    <!-- video_29 -->
-                                    <object class="mobilevideo10">
-                                        <param id="video" name="movie"
-                                               value="http://www.youtube.com/v/KWrXZzzq1B0?version=3&start=11&end=13&autoplay=0&amp;hl=en_US&amp;rel=0"/>
-                                        <param name="allowFullScreen" value="true"/>
-                                        <param name="allowscriptaccess" value="always"/>
-                                        <embed id="video_embedded"
-                                               src="http://www.youtube.com/v/KWrXZzzq1B0?version=3&start=11&end=13&autoplay=0&amp;hl=en_US&amp;rel=0"
-                                               type="application/x-shockwave-flash" class="mobilevideo10" allowscriptaccess="always"
-                                               allowfullscreen="true"></embed>
-                                    </object>
-                                    <!-- WhyNotMetric3 -->
-                                    <div name="WhyNotMetric3" id="j_61" dsid="WhyNotMetric3" data-role="appery_label"
-                                    class=' mobilelabel15 '>
-                                        Inappropriate
-                                    </div>
-                                </div>
-                            </td>
-                            <!-- mobilegridcell_26 -->
-                            <td id="j_62" name="mobilegridcell_26" class="mobilegridcell17" colspan=1 rowspan=1>
-                                <div class="cell-wrapper">
-                                    <!-- video_30 -->
-                                    <object class="mobilevideo11">
-                                        <param id="video" name="movie"
-                                               value="http://www.youtube.com/v/KWrXZzzq1B0?version=3"/>
-                                        <param name="allowFullScreen" value="true"/>
-                                        <param name="allowscriptaccess" value="always"/>
-                                        <embed id="video_embedded"
-                                               src="http://www.youtube.com/v/KWrXZzzq1B0?version=3"
-                                               type="application/x-shockwave-flash" class="mobilevideo11" allowscriptaccess="always"
-                                               allowfullscreen="true"></embed>
-                                    </object>
-                                    <!-- WhyNotMetric4 -->
-                                    <div name="WhyNotMetric4" id="j_64" dsid="WhyNotMetric4" data-role="appery_label"
-                                    class=' mobilelabel16 '>
-                                        Inappropriate
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
+            </td>
+            <!-- mobilegridcell_24 -->
+            <td id="j_56" name="mobilegridcell_24" class="mobilegridcell15" colspan=1 rowspan=1>
+                <div class="cell-wrapper">
+                    <!-- LeastFunny2 -->
+                    <object class="mobilevideo8">
+                        <param id="video" name="movie"
+                               value="http://www.youtube.com/v/KWrXZzzq1B0?version=3&start=11&end=13&autoplay=0&amp;hl=en_US&amp;rel=0"/>
+                        <param name="allowFullScreen" value="true"/>
+                        <param name="allowscriptaccess" value="always"/>
+                        <embed id="video_embedded"
+                               src="http://www.youtube.com/v/KWrXZzzq1B0?version=3&start=11&end=13&autoplay=0&amp;hl=en_US&amp;rel=0"
+                               type="application/x-shockwave-flash" class="mobilevideo8" allowscriptaccess="always"
+                               allowfullscreen="true"></embed>
+                    </object>
+                    <!-- WhyNotMetric2 -->
+                    <div name="WhyNotMetric2" id="j_58" dsid="WhyNotMetric2" data-role="appery_label"
+                         class=' mobilelabel14 '>
+                        Inappropriate
+                    </div>
                 </div>
-                <!-- spacer_42 -->
-                <div id='j_67' dsid="spacer_42" class='mobilespacer mobilespacer2'>
+            </td>
+        </tr>
+        <tr class="mobilegrid3_row_1">
+            <!-- mobilegridcell_25 -->
+            <td id="j_59" name="mobilegridcell_25" class="mobilegridcell16" colspan=1 rowspan=1>
+                <div class="cell-wrapper">
+                    <!-- video_29 -->
+                    <object class="mobilevideo10">
+                        <param id="video" name="movie"
+                               value="http://www.youtube.com/v/KWrXZzzq1B0?version=3&start=11&end=13&autoplay=0&amp;hl=en_US&amp;rel=0"/>
+                        <param name="allowFullScreen" value="true"/>
+                        <param name="allowscriptaccess" value="always"/>
+                        <embed id="video_embedded"
+                               src="http://www.youtube.com/v/KWrXZzzq1B0?version=3&start=11&end=13&autoplay=0&amp;hl=en_US&amp;rel=0"
+                               type="application/x-shockwave-flash" class="mobilevideo10" allowscriptaccess="always"
+                               allowfullscreen="true"></embed>
+                    </object>
+                    <!-- WhyNotMetric3 -->
+                    <div name="WhyNotMetric3" id="j_61" dsid="WhyNotMetric3" data-role="appery_label"
+                         class=' mobilelabel15 '>
+                        Inappropriate
+                    </div>
                 </div>
-                <!-- SubmitClips -->
-                <a data-role="button" name="SubmitClips" dsid="SubmitClips" class='  mobilebutton1'
-                id='j_66' data-corners="true" data-mini="false" data-theme="a" tabIndex="1">
-                Submit Clips
-                </a>
-            </div>
-            <!-- mobilefooter1 -->
-            <div data-role="footer" data-position="fixed" class=" mobilefooter3" name="mobilefooter1"
-            dsid="mobilefooter1" id="j_68" data-theme="a">
-            </div>
-        </div>
-        <script src="{{ STATIC_URL }}Chart.min.js"></script>
-    <script>
-        $(function () {
-                    var ctx = $("#chart").get(0).getContext("2d");
-                    var data = {
-                        labels: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30],
-                        datasets: [
-                            {
-                                fillColor: "rgba(151,187,205,0.5)",
-                                strokeColor: "rgba(151,187,205,1)",
-                                pointColor: "rgba(151,187,205,1)",
-                                pointStrokeColor: "#fff",
-                                data: [0,0,0,0,0,0,-10,-30,-50,-20,-5,5,10,0,-5,-10,15,-5,0,0,5,5,5,40,50,70,80,100,100,100,100]
-                            }
-                        ]
-                    }
-                    var myNewChart = new Chart(ctx).Line(data);
-            });
-    </script>
-    </body>
+            </td>
+            <!-- mobilegridcell_26 -->
+            <td id="j_62" name="mobilegridcell_26" class="mobilegridcell17" colspan=1 rowspan=1>
+                <div class="cell-wrapper">
+                    <!-- video_30 -->
+                    <object class="mobilevideo11">
+                        <param id="video" name="movie"
+                               value="http://www.youtube.com/v/KWrXZzzq1B0?version=3"/>
+                        <param name="allowFullScreen" value="true"/>
+                        <param name="allowscriptaccess" value="always"/>
+                        <embed id="video_embedded"
+                               src="http://www.youtube.com/v/KWrXZzzq1B0?version=3"
+                               type="application/x-shockwave-flash" class="mobilevideo11" allowscriptaccess="always"
+                               allowfullscreen="true"></embed>
+                    </object>
+                    <!-- WhyNotMetric4 -->
+                    <div name="WhyNotMetric4" id="j_64" dsid="WhyNotMetric4" data-role="appery_label"
+                         class=' mobilelabel16 '>
+                        Inappropriate
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+<!-- spacer_42 -->
+<div id='j_67' dsid="spacer_42" class='mobilespacer mobilespacer2'>
+</div>
+<!-- SubmitClips -->
+<a data-role="button" name="SubmitClips" dsid="SubmitClips" class='  mobilebutton1'
+   id='j_66' data-corners="true" data-mini="false" data-theme="a" tabIndex="1">
+    Submit Clips
+</a>
+</div>
+<!-- mobilefooter1 -->
+<div data-role="footer" data-position="fixed" class=" mobilefooter3" name="mobilefooter1"
+     dsid="mobilefooter1" id="j_68" data-theme="a">
+</div>
+</div>
+</center>
+<script src="{{ STATIC_URL }}Chart.min.js"></script>
+<script>
+    $(function () {
+        var ctx = $("#chart").get(0).getContext("2d");
+        var data = {
+            labels: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199],
+            datasets: [
+                {
+                    fillColor: "rgba(151,187,205,0.5)",
+                    strokeColor: "rgba(151,187,205,1)",
+                    pointColor: "rgba(151,187,205,1)",
+                    pointStrokeColor: "#fff",
+                    data: [-20,-30,-50,-10,0,0,-10,-30,-50,-20,-5,5,10,0,-5,-10,-15,-5,0,0,5,5,5,0,0,0,0,0,20,100,100,0,40,0,20,40,85,0,0,0,0,0,0,10,20,30,70,80,90,0,85,90,100,-10,-40,-50,-20,-80,-100,-100,-100,-100,-90,-60,-50,-40,-50,-80,-80,-85,-75,-50,-40,-30,0,0,0,0,0,0,50,100,100,0,0,-60,-70,-70,0,0,0,0,0,0,0,10,20,30,40,40,80,0,0,0,0,0,10,30,0,0,0,0,0,0,0,0,0,0,0,0,30,0,0,0,0,0,0,0,0,50,-70,-60,-60,-60,-60,-60,-60,-60,-70,-70,0,0,0,0,-50,-60,-50,-40,-30,-40,-50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-30,-40,-40,-50,0,0,0,0,0,-30,-30,-40,0,0,0,-20,-10,-10,-10,-10,0,0,0,0,0,0,0]
+                }
+            ]
+        }
+        var myNewChart = new Chart(ctx).Line(data, {});
+    });
+</script>
+</body>
 
 </html>
