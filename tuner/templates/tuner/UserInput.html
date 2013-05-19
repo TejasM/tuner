@@ -63,7 +63,7 @@
         if (parseInt(joystick.deltaX()) != 0 && parseInt(joystick.deltaY()) != 0){
             data.push({name:"change",text:joystick.deltaX()+";"+joystick.deltaY()+";"+time});
         }
-    }, 1000);
+    }, 1000/30);
 </script>
 </body>
 </html>
