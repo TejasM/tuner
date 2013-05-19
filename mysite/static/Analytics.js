@@ -31,49 +31,6 @@ function setDetailContent(pageUrl) {
     Appery.setDetailContent(pageUrl);
 }
 
-$(function () {
-        $('#container').highcharts({
-            chart: {
-                type: 'area'
-				
-            },
-            title: {
-                text: 'Funny Metrics'
-            },
-            xAxis: {
-                type: 'datetime',
-                maxZoom: 3600*1000, // 1 hr
-                title: {
-                    text: 'Time'
-                }
-            },
-            yAxis: {
-				labels: {
-					formatter: function() {
-						return this.value + ' %';
-					}
-				},
-                title: {
-                    text: 'Percentage'
-                }
-            },
-            credits: {
-                enabled: false
-            },
-            series: [{
-                name: 'Funny',
-                data: [
-				[1, 65],
-				[2.5, 75],
-				[13000, 65],
-				[1400000, 65],
-				[15, 65],
-				[16, 65]
-			
-				]
-            }]
-        });
-    });
 
 //createSpinner("files/resources/lib/jquerymobile/images/ajax-loader.gif");
 Appery.AppPages = [{
