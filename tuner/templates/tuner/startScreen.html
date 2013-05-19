@@ -129,11 +129,62 @@
         text: "Stupid Funny"
     });
 
+
+     var text = new Kinetic.Text({
+        x: 318.75,
+        y: -87.25,
+        text: "Don't Get it",
+        fontSize: 18,
+        fontFamily: 'Calibri',
+        fill: '#555',
+        width: 200,
+        padding: 20,
+        align: 'center'
+    });
+    var text1 = new Kinetic.Text({
+        x: 106.25,
+        y: -87.25,
+        text: "Inappropriate",
+        fontSize: 18,
+        fontFamily: 'Calibri',
+        fill: '#555',
+        width: 200,
+        padding: 20,
+        align: 'center'
+    });
+    var text2 = new Kinetic.Text({
+        x: 318.75,
+        y: 87.25,
+        text: "Witty Funny",
+        fontSize: 18,
+        fontFamily: 'Calibri',
+        fill: '#555',
+        width: 200,
+        padding: 20,
+        align: 'center'
+    });
+    var text3 = new Kinetic.Text({
+        x: 106.25,
+        y: 87.25,
+        text: "Stupid Funny",
+        fontSize: 18,
+        fontFamily: 'Calibri',
+        fill: '#555',
+        width: 200,
+        padding: 20,
+        align: 'center'
+    });
+
     // add the shape to the layer
     layer.add(rect);
     layer.add(rect1);
     layer.add(rect2);
     layer.add(rect3);
+
+    layer.add(text);
+    layer.add(text1);
+    layer.add(text2);
+    layer.add(text3);
 
     // add the layer to the stage
     stage.add(layer);
