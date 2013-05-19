@@ -159,7 +159,13 @@
                 rect.setFill('red');
             }
             layer.draw();
-
+            setTimeout(function(){
+                rect.setFill('white');
+                rect1.setFill('white');
+                rect2.setFill('white');
+                rect3.setFill('white');
+                layer.draw();
+            }, 1000);
         }
     });
 </script>
